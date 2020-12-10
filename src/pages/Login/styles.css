@@ -1,0 +1,206 @@
+#LoginPage {
+    height: 100vh;
+    background-color: #ededf1;
+    background: url('../../assets/re.png') no-repeat 725px bottom;
+  }
+
+/*container login*/
+
+  
+#loginPage .content {
+    width: 100%;
+    height: 100%;
+    
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  #LoginPage .content header {
+    margin: 0px 0 0;
+    border-bottom: solid 2px black;
+    width: 2415px;
+    height: 58px;
+    
+    background-color: #ffffff ;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between ;
+    
+    padding: 8px;
+
+  }
+  
+.btn-back {
+
+    border: none;
+    border-radius: 25px;
+
+    margin-left: 1200px;
+
+    background:#2f2fad;
+
+    font-size: 5px;
+    height: 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold ;
+
+}
+
+.btn-back:hover {
+    cursor: pointer;
+    background-color: #553ce4;
+    transition: .5s;
+}
+
+#login-container {
+    
+    flex: 1;
+    max-width: 540px;
+
+    margin-left: 80px;
+    margin-right: auto;
+    
+    margin-top: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 0 30px;
+
+
+    border-radius: 10px;
+
+    background-color: #fafafd;
+
+    border-color: #000000;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0, .64) ;
+}
+
+.login-tittle {
+    font-size: 1.1rem;
+    color:#07070a ;
+
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+/* fomrulário */
+
+.Login{
+    margin-top: 18px;
+    margin-bottom: 40px;
+    align-items: center;
+    
+}
+
+/*campos do formulário*/
+
+.Login-Field {
+    
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: #0a0909;
+
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: 1rem;
+
+    font-size: 14px;
+    text-align: left;
+
+    display: block;
+    
+    width: 90%;
+    transition: all .1s linear;
+
+}
+
+.Login-Field:focus {
+    box-shadow: 0 4px 4px rgba(0,0,0, .64)  ;
+    outline: none;
+}
+
+.Login-Field:hover {
+    background-color: #eceefd;
+    transition: .5s;
+}
+.Login-Error {
+    color: #ff8080;
+    text-align: left;
+}
+
+.btn {
+    width: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #2f2fad;
+
+    margin-top: 1.5rem;
+    padding: .9rem 8.3rem;
+    margin-left: 115px;
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold ;
+    
+    color: #fdfdfd;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #553ce4;
+    transition: .5s;
+}
+
+#login-container img {
+    width: auto;
+    height: auto;
+
+    margin-top: 25px;
+    margin-left: 180px;
+
+    max-width:200px;
+    max-height:150px;
+
+    align-items: center;
+    border-radius: 12px;
+}
+
+.icon {
+    margin-right: .3rem;
+    align-items: center;
+}
+p {
+    font-size: 12px;
+}
+
+.campo-obg {
+    color: rgb(184, 6, 6);
+}
+
+body, input, button, header {
+    font-family: Roboto;
+
+  }
+   
+  h1, h2, h3, h4, h5, h6, thead {
+    color: var(--title-color);
+    font-family: Ubuntu;
+  }

@@ -1,0 +1,112 @@
+#page-details {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #page-details .content {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  #page-details .content header {
+    margin: 0px 0 0;
+    border-bottom: solid 2px black;
+    width: 100%;
+    height: 58px;
+    background-color: #F7F7F7 ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 8px;
+  }
+
+  #page-details header a {
+    color: var(--title-color);
+    font-weight: bold;
+    text-decoration: none;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #page-details .content button {
+    border:none;
+    float:left;
+    height:42px;
+    border-radius:0 4px px 0;
+    width:148px;
+    font-weight:bold;
+    background:#00A59D;
+    color: #FFF;
+  }
+
+ 
+  #page-details .content main {
+    flex: 1;
+    max-width: 560px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #page-details .content main p {
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    margin-left: 148px;
+    line-height: 38px;
+  }
+  
+
+  #page-details .content main h1  {
+    font-size: 32px;
+    text-align: center;
+    color:black ;
+    font-weight: initial;
+    margin-top: 4px;
+  }
+  
+  @media(max-width: 800px) {
+    
+  #page-details .content {
+      align-items: center;
+      text-align: center;
+    }
+  
+    
+  #page-details .content header {
+      margin: 48px auto 0;
+    }
+  
+    
+  #page-details .content main {
+      align-items: center;
+    }
+  }
+
+  body, input, button, header {
+    font-family: Roboto;
+
+  }
+    body {
+      background-color: #E6EAED;
+
+    }
+  
+  
+  h1, h2, h3, h4, h5, h6, thead {
+    color: var(--title-color);
+    font-family: Ubuntu;
+  }

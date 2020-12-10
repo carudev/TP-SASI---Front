@@ -1,0 +1,166 @@
+
+
+
+#page-home {
+    height: 100vh;
+    background: url('../../assets/home-background.png') no-repeat 550px bottom;
+  }
+  
+  #page-home .content {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #page-home .content header {
+    margin: 0px 0 0;
+    border-bottom: solid 2px black;
+    width: 100%;
+    height: 58px;
+    background-color: #F7F7F7 ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 8px;
+  }
+
+#page-home .content header #divBusca{
+    background-color:#E0EEEE;
+    border:solid 1px black;
+    border-radius:5px;
+
+    width:300px;
+    height:32px;
+  }
+   
+  #inputBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px; 
+    
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+  }
+   
+  #btnBusca{
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 4px px 0;
+    width:70px;
+    font-weight:bold;
+    background:#00A59D;
+    color: #FFF;
+  }
+   
+  #divBusca img{
+    float:left;
+    padding: 3px;
+
+  }
+
+
+
+
+
+  #page-home .content table {
+    width: 100%;
+    text-align: center;
+    margin: 150px;
+    margin-top: 48px;
+    border: 1px solid black;
+    border-spacing: 0px;
+    border-radius: 3px;
+
+  }
+
+
+
+  #page-home .content thead {
+    background-color: black;
+    text-align: center;
+    color: #FFF;
+    font-weight: bolder;
+  }
+
+#page-home .content td {
+ 
+  padding: 10px;
+  border: 1px solid black;
+  
+}
+
+#page-home .content Link {
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+#page-home .content tr {
+  border: 1px solid black;
+}
+
+
+  #page-home .content main {
+    flex: 1;
+    max-width: 560px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #page-home .content main p {
+    font-size: 20px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    margin-left: 148px;
+    line-height: 38px;
+  }
+  
+  #page-home .content main h1  {
+    font-size: 48px;
+    text-align: center;
+    color:black ;
+    font-weight: initial;
+    padding-top: 5px;
+  }
+  
+  @media(max-width: 800px) {
+    #page-home .content {
+      align-items: center;
+      text-align: center;
+    }
+  
+    #page-home .content header {
+      margin: 48px auto 0;
+    }
+  
+    #page-home .content main {
+      align-items: center;
+    }
+  }
+
+  body, input, button, header {
+    font-family: Roboto;
+
+  }
+    body {
+      background-color: #E6EAED;
+
+    }
+  
+  
+  h1, h2, h3, h4, h5, h6, thead {
+    color: var(--title-color);
+    font-family: Ubuntu;
+  }
