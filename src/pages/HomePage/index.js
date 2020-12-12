@@ -31,6 +31,14 @@ const HomePage = () => {
                         <strong>Não tem conta? Cadastre-se aqui.</strong>
                     </Link>
 
+
+                    <Link to={{ pathname: "https://docs.google.com/document/d/1DRJ7W4ZgNfWjncHUam7AdHcCnbYkHysYWP2dsiu6ehQ/edit?usp=sharing" }} target="_blank" >
+                        <span>
+                        <FiLogIn />
+                        </span>
+                        <strong>Conheça nossa Politica de Segurança</strong>
+                    </Link>
+
                 </main>
            </div>
        </div>

@@ -35,8 +35,8 @@ import * as Yup from 'yup';
 
     const validations = Yup.object().shape({
         email: Yup.string().email(),
-        password: Yup.number().min(8).required(),
-        passwordConfirm: Yup.number().min(8).required()
+        password: Yup.number().min(8),
+        passwordConfirm: Yup.number().min(8)
             .oneOf([Yup.ref('password'), null],'Senhas não são iguais!')
     })
 
