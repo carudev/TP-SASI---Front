@@ -44,22 +44,16 @@ import * as Yup from 'yup';
     return (
 
         <div id="LoginPage">
-
-
             <div className="content">
-                 <header>                                  
-                    <div>
-                        <Link to="/">
-                            <span className="btn-back">
-                                <FiLogIn className="icon"/>
-                                <strong className="button-txt-back">Voltar</strong>
-                            </span>
-                        </Link>
-                    </div>           
-
+                <header>              
+                    <Link to="/">
+                        <span className="btn-back">
+                            <FiLogIn className="icon"/>
+                            <strong className="button-txt-back">Voltar</strong>
+                        </span>
+                    </Link>
                 </header> 
             </div>
-
 
 
         <div id="login-container">

@@ -3,14 +3,14 @@ import { FiLogIn } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
-import logo from '../../assets/logo.png';
+
 
 const HomePage = () => {
     return (
        <div id="HomePage">
            <div className="content">
                 { <header>
-                    <img src= {logo} alt="Oliveira" />
+                    <h1>Oliveira Investimentos</h1>
                 </header> }
 
                 <main>

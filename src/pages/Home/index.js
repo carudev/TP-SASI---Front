@@ -109,7 +109,7 @@ const renderBody = () => {
       <div className="content">
 
       <header>
-          <img src={logo} alt="SmartBotter" />
+          <h1>Oliveira Investimentos</h1>
 
           <div id="divBusca">
           <Link to="/">

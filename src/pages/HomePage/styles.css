@@ -1,6 +1,6 @@
 #HomePage {
     height: 100vh;
-    background: url('../../assets/home-background.png') no-repeat 450px bottom;
+    background: url('../../assets/home-background.png') no-repeat 650px bottom;
     background-color: #ededf1;
   }
   
@@ -20,7 +20,7 @@
     margin: 0px 0 0;
     border-bottom: solid 2px black;
     width: 2415px;
-    height: 58px;
+    height: 90px;
     
     background-color: #ffffff ;
 
@@ -33,16 +33,12 @@
 
   }
 
-   img {
-     width: auto;
-     height: 60px;
-  }
 
   #HomePage .content main {
     flex: 1;
     max-width: 560px;
     
-    margin-left: 64px;
+    margin-left: 194px;
     padding: 0 30px;
   
     display: flex;
