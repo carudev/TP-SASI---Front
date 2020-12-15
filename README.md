@@ -8,25 +8,41 @@ Agora, vamos criar um arquivo de configuração, copie e cole o comando abaixo e
 
 
 [req]
+
 distinguished_name = req_distinguished_name
+
 x509_extensions = v3_req
+
 prompt = no
+
 [req_distinguished_name]
+
 C = GB  # Enter 2 digit country code here
+
 O = My Company # Enter company name
+
 CN = localhost
+
 [v3_req]
+
 keyUsage = critical, digitalSignature, keyAgreement
+
 extendedKeyUsage = serverAuth
+
 subjectAltName = @alt_names
+
 [alt_names]
+
 DNS.1 = localhost
+
 
 
 
 Em seguida, dê o seguinte comando para criar seu certificado e sua chave:
 
+
 openssl req -x509 -newkey rsa:4096 -sha256 -keyout certificate.key -out certificate.crt -days 365 -config certificate.conf -new -nodes
+
 
 Agora, vamos fazer tudo funcionar! :D
 Na pasta raiz do projeto crie um arquivo .env e coloque o seguinte texto nele:
@@ -50,6 +66,8 @@ Ainda precisamos avisar o windows que o nosso certificado é confiável! :)
  
  
  Você pode seguir esse mesmo tutorial em sua postagem original aqui:https://dev.to/wozzo/using-https-with-create-react-app-5337
+ 
+ 
  
  That's all folks! :D
  
