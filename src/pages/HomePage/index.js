@@ -9,9 +9,9 @@ const HomePage = () => {
     return (
        <div id="HomePage">
            <div className="content">
-                { <header>
-                    <h1>Oliveira Investimentos</h1>
-                </header> }
+                 <header>
+                    <h1 id="title">   ⠀⠀⠀⠀⠀Oliveira Investimentos</h1>
+                </header> 
 
                 <main>
                     <h1>Comece agora mesmo a investir!</h1>

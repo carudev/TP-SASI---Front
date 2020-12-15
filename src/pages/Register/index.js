@@ -47,7 +47,9 @@ const Register = () => {
         return (
             <div id="RegisterPage">
             <div className="content">
-                <header>                   
+                <header>             
+
+                    <h1 id="title">   ⠀⠀⠀⠀⠀Oliveira Investimentos</h1>    
                     <div>
                         <Link to="/">
                             <span className="btn-back">

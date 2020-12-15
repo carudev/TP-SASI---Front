@@ -1,10 +1,12 @@
+// <%@Language="VBSCRIPT"%>
+// <!--#include virtual="/ForceSSL.inc"-->
 import React, { useState } from 'react';
 import api from '../../services/api';
 
 import './styles.css';
 
 import { Link } from 'react-router-dom';
-import { FiLogIn } from 'react-icons/fi';
+import Home from '../Home';
 import logo from '../../assets/logo.png';
 
 import {ErrorMessage, Form, Formik, Field} from 'formik';
@@ -12,6 +14,7 @@ import * as Yup from 'yup';
 
 
  export default function Login  ({ history }) {
+
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -42,16 +45,19 @@ import * as Yup from 'yup';
 
 
     return (
-
         <div id="LoginPage">
             <div className="content">
-                <header>              
-                    <Link to="/">
-                        <span className="btn-back">
-                            <FiLogIn className="icon"/>
-                            <strong className="button-txt-back">Voltar</strong>
-                        </span>
+                <header> 
+
+                <h1 id="title">   ⠀⠀⠀⠀⠀Oliveira Investimentos</h1>
+
+
+                    <Link to="/Home">
+                        <button>
+                            Voltar
+                        </button>       
                     </Link>
+     
                 </header> 
             </div>
 
@@ -95,6 +101,7 @@ import * as Yup from 'yup';
                             name="password" 
                             className="Login-Field"
                             placeholder="Digite sua senha, apenas números!"
+                            required
                             value={password}
                             onChange={event => setPassword(event.target.value)}
                         />              
@@ -110,6 +117,7 @@ import * as Yup from 'yup';
                             name="passwordConfirm" 
                             className="Login-Field"
                             placeholder="Confirme sua senha"
+                            required
                             value={passwordConfirm}
                             onChange={event => setPasswordConfirm(event.target.value)}
 

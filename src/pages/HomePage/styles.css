@@ -33,10 +33,14 @@
 
   }
 
+#title{
+    margin-left: 35px;
+}
+
 
   #HomePage .content main {
     flex: 1;
-    max-width: 560px;
+    max-width: 590px;
     
     margin-left: 194px;
     padding: 0 30px;
@@ -86,6 +90,8 @@
     justify-content: center;
     transition: background-color 0.2s;
   }
+
+
   
  #HomePage .content main a span svg {
     color: #FFF;

@@ -13,9 +13,9 @@ const Routes = () => {
         <BrowserRouter>
             <Route component={HomePage} path="/" exact />
             <Route component={Login} path="/Login" exact />
+            <Route component={Home} path="/Home" exact />
             <Route component={Register} path="/Register" exact /> 
             <Route component={PoliticaSeguranca} path="/PoliticaSeguranca" exact />
-            <Route component={Home} path="/Home" exact />
             <Route component={CoinDetails} path="/coin-details/:nome" />
         </BrowserRouter>
     )
