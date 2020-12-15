@@ -1,16 +1,79 @@
-Descrição do desafio
+Para rodar utilize o "yarn start", para conectar com o servidor certifique-se de rodar primeiro o servidor utilizando os comandos especificados no arquivo server.
 
-O desafio consistia em dadas as cotações de criptomoedas reportadas em tempo real através de uma API pública, criar um projeto em React que deveria exibir um ranking com estes dados.
+Utilização do certificado:
 
-Desafios e Dificuldades
-
-A principal dificuldade do projeto foi criar gráficos para os dados da moeda especifica, apesar das inúmeras ferramentas disponíveis na web ainda não consegui realizar essa funcionalidade, mas pretendo dar continuidade a aplicação realizando as funionalidades de pesquisa e de gráficos interativos. Uma outra dificuldade foi lidar com dados da bolsa, visto que é uma área que sou leiga, mas adorei conhecer e aprender um pouco mais sobre, então a leitura e interpretação dos dados foi uma pequena barreira. Me senti desafiada e aprendi muito com esse projeto, sinto que preciso buscar mais sobre componentização e aplicar de melhor maneira tudo que o react tem a ofercer.
-
-Melhorias
-
-As melhorias que pretendo aplicar são primeiramente na parte de detalhes da moeda, planejo deixa-lá mais completa e interativa para o usuário. De maneira que possa ter um menu de gráficos para melhor visualização. Na página Home gostaria que a tabela tivesse paginação e uma barra de pesquisas que funcionasse para pesquisas dentro da tabela. Todos os requisitos eu tentei aplicar dentro do periodo do desafio, mas ainda não tive sucesso, vou continuar tentando para que o projeto por fim fique com uma visualização simples e agradável ao usuário.
+Para criar o certificado você vai precisar do Open SSL. Você pode instalar usando o chocolatey com os comandos: "choco install openssl". Importante rodar este comando na sua pasta do projeto.
+Agora, vamos criar um arquivo de configuração, copie e cole o comando abaixo e salve num arquivo na sua pasta raiz do projeto com o seguinte nome: certificate.conf. Em seguida, o conteúdo a ser copiado:
 
 
-Aprendizado
 
-O desafio foi um passo importante na minha jornada, afinal lidar com problemas mais reais traz uma bagagem infinita de pesquisa e conhecimento, desejo prosseguir com o projeto justamente por achar que estou aprendendo muito e me desafiando a conhecer novas ferramentas e funcionalidades, além de melhorar  naquelas que já estou estudando. 
+[req]
+
+distinguished_name = req_distinguished_name
+
+x509_extensions = v3_req
+
+prompt = no
+
+[req_distinguished_name]
+
+C = GB  # Enter 2 digit country code here
+
+O = My Company # Enter company name
+
+CN = localhost
+
+[v3_req]
+
+keyUsage = critical, digitalSignature, keyAgreement
+
+extendedKeyUsage = serverAuth
+
+subjectAltName = @alt_names
+
+[alt_names]
+
+DNS.1 = localhost
+
+
+
+
+Em seguida, dê o seguinte comando para criar seu certificado e sua chave:
+
+
+openssl req -x509 -newkey rsa:4096 -sha256 -keyout certificate.key -out certificate.crt -days 365 -config certificate.conf -new -nodes
+
+
+Agora, vamos fazer tudo funcionar! :D
+Na pasta raiz do projeto crie um arquivo .env e coloque o seguinte texto nele:
+
+HTTPS=true
+
+SSL_CRT_FILE=certificate.crt
+
+SSL_KEY_FILE=certificate.key
+
+Prontinho! Agora é só rodar um yarn start e estará tudo funcionando! #SQN
+
+Ainda precisamos avisar o windows que o nosso certificado é confiável! :)
+
+* No seu Windowsm abre o menu iniciar e pesquise por "certificados";
+* Em seguida, "Gerenciar Certificados do Computador";
+* Em seguida, " Certificações confiáveis";
+* Agora clique com o botão direito em "Certificados" e selecione "Todos" -> "Importar".
+* Selecione o arquivo de certificado criado na pasta do projeto e clique em next.
+* Siga as telas seguintes para concluir a instalção!
+ 
+ 
+ Você pode seguir esse mesmo tutorial em sua postagem original aqui:https://dev.to/wozzo/using-https-with-create-react-app-5337
+ 
+ 
+ 
+ That's all folks! :D
+ 
+ 
+                                                              Made with 💜 by carudev
+
+
+
+
