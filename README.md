@@ -5,6 +5,8 @@ Utilização do certificado:
 Para criar o certificado você vai precisar do Open SSL. Você pode instalar usando o chocolatey com os comandos: "choco install openssl". Importante rodar este comando na sua pasta do projeto.
 Agora, vamos criar um arquivo de configuração, copie e cole o comando abaixo e salve num arquivo na sua pasta raiz do projeto com o seguinte nome: certificate.conf. Em seguida, o conteúdo a ser copiado:
 
+
+
 [req]
 distinguished_name = req_distinguished_name
 x509_extensions = v3_req
@@ -20,6 +22,8 @@ subjectAltName = @alt_names
 [alt_names]
 DNS.1 = localhost
 
+
+
 Em seguida, dê o seguinte comando para criar seu certificado e sua chave:
 
 openssl req -x509 -newkey rsa:4096 -sha256 -keyout certificate.key -out certificate.crt -days 365 -config certificate.conf -new -nodes
@@ -28,7 +32,9 @@ Agora, vamos fazer tudo funcionar! :D
 Na pasta raiz do projeto crie um arquivo .env e coloque o seguinte texto nele:
 
 HTTPS=true
+
 SSL_CRT_FILE=certificate.crt
+
 SSL_KEY_FILE=certificate.key
 
 Prontinho! Agora é só rodar um yarn start e estará tudo funcionando! #SQN
